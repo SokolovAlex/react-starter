@@ -1,0 +1,53 @@
+{
+    // https://www.typescriptlang.org/docs/handbook/compiler-options.html
+    "compilerOptions": {
+        // Target latest version of ECMAScript.
+        "target": "esnext",
+        // Module type.
+        "module": "esNext",
+        // Search under node_modules for non-relative imports.
+        "moduleResolution": "node",
+        // Allow default imports from modules with no default export.
+        "allowSyntheticDefaultImports": true,
+        // Process & infer types from .js files.
+        "allowJs": false,
+        // Report errors in .js files. Use in conjunction with --allowJs.
+        "checkJs": false,
+        // Don't emit; allow Babel to transform files.
+        "noEmit": true,
+        // Enable strictest settings like strictNullChecks & noImplicitAny.
+        "strict": true,
+        // Parse in strict mode and emit "use strict" for each source file.
+        "alwaysStrict": true,
+        // Disallow inconsistently-cased references to the same file.
+        "forceConsistentCasingInFileNames": true,
+        // Resolve keyof to string valued property names only (no numbers or symbols).
+        "keyofStringsOnly": true,
+        // Report errors for fallthrough cases in switch statement.
+        "noFallthroughCasesInSwitch": true,
+        // Report error when not all code paths in function return a value.
+        "noImplicitReturns": true,
+        // Report errors on unused parameters.
+        "noUnusedParameters": true,
+        // Report errors on unused locals.
+        "noUnusedLocals": true,
+        // Do not truncate error messages.
+        "noErrorTruncation": true,
+
+        "experimentalDecorators": true,
+        // Support JSX in .tsx files: "React" or "Preserve". See JSX.
+        "jsx": "preserve",
+        "types": [
+            "webpack-env",
+        ],
+        "typeRoots": [
+            "./node_modules/@types",
+            "../../node_modules/@types",
+            "./src/typings/**/*"
+        ],
+        "lib": ["es6", "dom"]
+    },
+    "include": [
+        "./src/**/*",
+    ]
+}
